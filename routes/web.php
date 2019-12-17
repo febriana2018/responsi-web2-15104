@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('base');
+    return view('welcome');
+});
+
+Route::get('/info', function () {
+    return view('info');
 });
 
 Route::resource('/jobs', 'JobsController');

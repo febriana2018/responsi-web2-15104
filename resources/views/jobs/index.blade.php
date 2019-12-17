@@ -1,6 +1,6 @@
-@extends('')
+@extends('base')
 @section('jobs','active')
-@section('')
+@section('content')
 <a href="{{route('jobs.create')}}" class="btn btn-primary">Tambah Data</a>
 <br/><br/>
 <table class="table table-bordered table-hover">

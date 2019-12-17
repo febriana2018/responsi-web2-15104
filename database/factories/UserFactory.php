@@ -36,7 +36,7 @@ $factory->define(Jobs::class, function (Faker $faker) {
 
 $factory->define(Employees::class, function (Faker $faker) {
     return [
-        'id_jobs' => $faker->numberBetween(id_jobs),
+        'id_jobs' => $faker->numberBetween(1,10),
         'name' => $faker->name,
         'email' => $faker->email,
         'phone' => $faker->phoneNumber,

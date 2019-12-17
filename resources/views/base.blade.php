@@ -26,11 +26,11 @@
                     </li>
                     <li class="nav-item @yield('info')">
                         <!-- isikan link INFO anda disini -->
-                        <a class="nav-link" href="">Info</a>
+                        <a class="nav-link" href="/info">Info</a>
                     </li>
                 </ul>
                 @if (Route::has('login'))
-                <form action="{{ route('auth.logout') }}" method="POST" class="form-inline">
+                <form action="{{ route('logout') }}" method="POST" class="form-inline">
                     @csrf
                     <button type="submit" class="btn btn-danger">Logout</button>
                 </form>

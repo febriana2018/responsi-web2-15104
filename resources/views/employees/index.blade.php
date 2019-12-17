@@ -16,7 +16,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($employee as $data)
+        @foreach($employees as $data)
         <tr>
             <th scope="row">{{$data->id_employees}}</th>
             <td>{{$data->jobs->name}}</td>

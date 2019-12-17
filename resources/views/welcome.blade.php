@@ -82,11 +82,12 @@
             <div class="content">
                 <div class="title m-b-md">
                     <!-- Isikan dengan username akun github anda -->
+                    Febriana2018
                 </div>
 
                 <div class="links">
                     <!-- ganti url dengan link github anda -->
-                    <!-- <a href="#">GitHub</a> -->
+                    <a href="https://github.com/febriana2018/responsi-web2-15104.git">GitHub</a>
                 </div>
             </div>
         </div>

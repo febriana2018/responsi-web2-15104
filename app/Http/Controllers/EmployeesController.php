@@ -15,7 +15,7 @@ class EmployeesController extends Controller
      */
     public function index()
     {
-        $da = Employees::all();
+        $data = Employees::all();
         return view('employees.index')->with('employees', $data);
     }
 
@@ -26,8 +26,8 @@ class EmployeesController extends Controller
      */
     public function create()
     {
-        $da = Jobs::all();
-        return view('employees.create')->with('employees', $data);
+        $data = Jobs::all();
+        return view('employees.create')->with('jobs', $data);
     }
 
     /**
@@ -53,7 +53,7 @@ class EmployeesController extends Controller
             'address' => $request->input('alamat')
         ]);
         $employees->save();
-        return redirect('employees.index');
+        return redirect('employees');
     }
 
     /**
@@ -104,7 +104,7 @@ class EmployeesController extends Controller
             'address' => $request->input('alamat')
         ];
         Employees::where('id_employees',$id)->update($data);
-        return redirect('employees.index');
+        return redirect('employees');
     }
 
     /**
@@ -116,6 +116,6 @@ class EmployeesController extends Controller
     public function destroy($id)
     {
         Employees::where('id_employees',$id)->delete();
-        return redirect('employees.index');
+        return redirect('employees');
     }
 }
