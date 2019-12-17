@@ -25,7 +25,7 @@ class JobsController extends Controller
      */
     public function create()
     {
-        return view('');
+        return view('jobs.create');
     }
 
     /**
@@ -66,7 +66,7 @@ class JobsController extends Controller
     public function edit($id)
     {
         $da = Jobs::where('id_jobs', '=', $id)->firstOrFail();
-        return view('')->with('', $ta);
+        return view('jobs.edit')->with('', $ta);
     }
 
     /**

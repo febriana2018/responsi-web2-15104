@@ -19,10 +19,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item @yield('jobs')">
-                        <a class="nav-link" href="">Jobs</a>
+                        <a class="nav-link" href="{{route('jobs.index')}}">Jobs</a>
                     </li>
                     <li class="nav-item @yield('employees')">
-                        <a class="nav-link" href="">Employees</a>
+                        <a class="nav-link" href="{{route('employees.index')}}">Employees</a>
                     </li>
                     <li class="nav-item @yield('info')">
                         <!-- isikan link INFO anda disini -->
@@ -30,7 +30,7 @@
                     </li>
                 </ul>
                 @if (Route::has('login'))
-                <form action="{{ route('logout') }}" method="POST" class="form-inline">
+                <form action="{{ route('auth.logout') }}" method="POST" class="form-inline">
                     @csrf
                     <button type="submit" class="btn btn-danger">Logout</button>
                 </form>
@@ -39,7 +39,7 @@
         </nav>
         <br/>
         <div class="container-fluid">
-            @yield()
+            @yield('content')
         </div>
     </body>
 </html>
